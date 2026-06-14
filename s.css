@@ -1,0 +1,522 @@
+/* --- Global Reset & Romantic Themes --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-cover {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
+              url('image/tulips.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #990011; 
+  color: #ffffff;
+  overflow-x: hidden;
+}
+.hero-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.mail-hint {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Red Interactive Envelope with Gold Wax Seal (Screenshot 1) */
+.wax-envelope {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.star {
+  position: fixed;
+  background: radial-gradient(circle, #fff6a5, #ffd700);
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  opacity: 0.8;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+  z-index: 9999;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(180deg);
+    opacity: 0;
+  }
+}
+.wax-envelope:hover {
+  transform: scale(1.05);
+}
+
+.envelope-body {
+  width: 180px;
+  height: 120px;
+  background-color: #b31b20; /* Vibrant romantic envelope red */
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-top: 65px solid #8a1014; /* Darker tone flap overlay */
+}
+
+.wax-seal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 45px;
+  height: 45px;
+  background: radial-gradient(#ffe066, #d4af37); /* Gold Wax Stamp Texture */
+  border-radius: 50%;
+  border: 2px solid #b89324;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.click-wax-text {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f0f0f0;
+}
+
+/* Greeting Display Layout (Screenshot 2) */
+.greeting-banner {
+  margin-top: 2rem;
+}
+
+.main-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+}
+
+.anni {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+/* --- Timeline Main Section Container --- */
+.timeline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* --- Section 2: Heartfelt Letter Layout (Screenshot 3) --- */
+.message-section {
+  padding: 2rem 0;
+  margin-bottom: 5rem;
+}
+
+.message-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .message-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .side-photo-frame { display: none; } /* Hide side banners on smaller mobile frames */
+}
+
+.side-photo-frame img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Central Card Box with Borders */
+.romantic-card {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: inset 0 0 15px rgba(255,255,255,0.1);
+}
+
+.card-heart-icon {
+  font-size: 1.5rem;
+  color: #ffcbd2;
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+  color: #ffcbd2;
+}
+
+.card-body-text p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  color: #fcedef;
+}
+
+.card-footer {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+  color: #ffffff;
+}
+
+/* --- Section 3: Polaroid Board Layout (Screenshot 4) --- */
+.polaroid-section {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.section-title-cursive {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+  color: #ffcbd2;
+}
+
+.polaroid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.polaroid {
+  background-color: #ffffff;
+  padding: 1rem 1rem 2rem 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.polaroid:nth-child(even) {
+  transform: rotate(3deg);
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 5;
+}
+
+.photo-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.polaroid-caption {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: #333333;
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+/* --- Section 4: Film Strip Video Presentation (Screenshot 5) --- */
+.film-strip-section {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.strip-header {
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  margin-bottom: 2rem;
+  color: #ffcbd2;
+}
+
+/* Classic analog cinematic window frame */
+.filmstrip-container {
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
+  background-color: #111111;
+  padding: 1.5rem 1rem;
+  border-top: 8px dashed #000;
+  border-bottom: 8px dashed #000;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.video-frame video {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+.strip-footer {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.college-blessing h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #ffcbd2;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+.strip-footer-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+
+.memory-btn{
+  padding:12px 24px;
+  border:none;
+  border-radius:30px;
+  background:#8b1e2d;
+  color:white;
+  cursor:pointer;
+  font-size:1rem;
+  transition:0.3s;
+}
+
+.memory-btn:hover{
+  transform:translateY(-3px);
+  background:#a52a3b;
+}
+
+
+.memory-section{
+  min-height:100vh;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  padding:100px 20px;
+  background:#a61d2d;
+}
+
+.memory-section.show{
+  display:flex;
+}
+
+.memory-paper{
+  background:white;
+  width:100%;
+  max-width:1000px;
+  padding:40px;
+  border-radius:20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}
+
+.memory-left img{
+  width:100%;
+  border-radius:15px;
+}
+
+.memory-caption{
+  margin-top:15px;
+  text-align:center;
+  color:#666;
+}
+
+.memory-right h2{
+  font-size:2rem;
+  margin-bottom:20px;
+  color:#8b1e2d;
+}
+
+.memory-right p{
+  margin-bottom:18px;
+  line-height:1.8;
+  color:#444;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .memory-paper{
+    grid-template-columns:1fr;
+  }
+  .message-layout-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .romantic-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .card-header {
+    font-size: 1rem;
+  }
+
+  .card-body-text p {
+    font-size: 0.85rem;
+  }
+
+  .card-footer {
+    font-size: 2rem;
+  }
+
+  .side-photo-frame {
+    display: none;
+  }
+
+}
+@media (max-width: 768px) {
+  .mail-hint {
+    font-size: 2.2rem;
+  }
+
+  .envelope-body {
+    width: 140px;
+    height: 95px;
+  }
+
+  .envelope-flap {
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-top: 50px solid #8a1014;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .anni {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 768px) {
+  .section-title-cursive {
+    font-size: 2.1rem;
+  }
+
+  .polaroid-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .photo-wrapper {
+    height: 150px;
+  }
+
+  .polaroid-caption {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+
+  .memory-section {
+    padding: 60px 15px;
+  }
+
+  .memory-paper {
+    grid-template-columns: 1fr; /* stack layout */
+    padding: 20px;
+    border-radius: 16px;
+    gap: 20px;
+  }
+
+  .memory-left {
+    text-align: center;
+  }
+
+  .memory-left img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .memory-caption {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #666;
+  }
+
+  .memory-right h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .memory-right p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+}
